@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Hospital Management System</title>
+	<style>
+		/* CSS styles for the pages */
+		body {
+			font-family: Arial, sans-serif;
+			margin: 0;
+			padding: 0;
+			background-color: #f2f2f2;
+		}
+		header {
+			background-color: #0066cc;
+			color: #fff;
+			padding: 10px;
+			text-align: center;
+		}
+		.container {
+			margin: 20px auto;
+			padding: 20px;
+			background-color: #fff;
+			border-radius: 5px;
+			box-shadow: 0 0 10px rgba(0,0,0,0.2);
+			max-width: 600px;
+		}
+		h1 {
+			margin-top: 0;
+		}
+		input[type="text"], input[type="password"], input[type="email"], select {
+			width: 100%;
+			padding: 10px;
+			border: none;
+			border-radius: 5px;
+			margin-bottom: 10px;
+			font-size: 16px;
+			box-sizing: border-box;
+		}
+		input[type="submit"], button {
+			background-color: #0066cc;
+			color: #fff;
+			padding: 10px;
+			border: none;
+			border-radius: 5px;
+			cursor: pointer;
+			font-size: 16px;
+		}
+		input[type="submit"]:hover, button:hover {
+			background-color: #004d99;
+		}
+	</style>
+</head>
+<body>
+	<header>
+		<h1>Hospital Management System</h1>
+	</header>
+	<div class="container">
+		<!-- Home page -->
+		<div id="home">
+			<h2>Welcome to our hospital management system</h2>
+			<p>Please login or register to access the system.</p>
+			<button onclick="showLogin()">Login</button>
+			<button onclick="showRegistration()">Register</button>
+		</div>
+		<!-- Login page -->
+		<div id="login" style="display:none">
+			<h2>Login</h2>
+			<form>
+				<label for="username">Username:</label>
+				<input type="text" id="username" name="username" required>
+				<label for="password">Password:</label>
+				<input type="password" id="password" name="password" required>
+				<input type="submit" value="Login">
+			</form>
+			<button onclick="showRegistration()">Register</button>
+		</div>
+		<!-- Registration page -->
+		<div id="registration" style="display:none">
+			<h2>Register</h2>
+			<form>
+				<label for="name">Full Name:</label>
+				<input type="text" id="name" name="name" required>
+				<label for="email">Email:</label>
+				<input type="email" id="email" name="email" required>
+				<label for="username">Username:</label>
+				<input type="text" id="username" name="username" required>
+				<label for="password">Password:</label>
+				<input type="password" id="password" name="password" required>
+				<label for="role">Role:</label>
+				<select id="role" name="role" required></select>
+					<option value="">Select role</option>
+          
+          <script>
+            function showLogin() {
+  document.getElementById("home").style.display = "none";
+  document.getElementById("registration").style.display = "none";
+  document.getElementById("login").style.display = "block";
+}
+
+function showRegistration() {
+  document.getElementById("home").style.display = "none";
+  document.getElementById("login").style.display = "none";
+  document.getElementById("registration").style.display = "block";
+}
+
+          </script>
+        </select>
+        </form>
+        </div>

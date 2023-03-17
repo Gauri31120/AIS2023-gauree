@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      /* CSS styles for the button */
+      button {
+        background-color: blue;
+        color: white;
+        font-size: 18px;
+        padding: 10px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <button id="myButton">Click me!</button>
+
+    <script>
+      // JavaScript code to add an event listener to the button
+      const button = document.getElementById("myButton");
+      button.addEventListener("mouseover", function () {
+        button.style.backgroundColor = "red";
+      });
+
+      button.addEventListener("mouseout", function () {
+        button.style.backgroundColor = "blue";
+      });
+    </script>
+  </body>
+</html>
